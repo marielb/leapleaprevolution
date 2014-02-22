@@ -7592,10 +7592,9 @@ body {
 }
 
 #wrapper {
-  white-space: pre-line;
   min-height: 100%;
   margin-bottom: -3em;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 
 @media -sass-debug-info {
@@ -7604,7 +7603,7 @@ body {
   }
 
   line {
-    font-family: \0000329;
+    font-family: \0000328;
   }
 }
 
@@ -7619,7 +7618,7 @@ body {
   }
 
   line {
-    font-family: \0000333;
+    font-family: \0000332;
   }
 }
 
@@ -7635,7 +7634,7 @@ body {
   }
 
   line {
-    font-family: \0000337;
+    font-family: \0000336;
   }
 }
 
@@ -7682,7 +7681,7 @@ body {
   }
 
   line {
-    font-family: \0000344;
+    font-family: \0000343;
   }
 }
 
@@ -7698,36 +7697,7 @@ body {
   }
 
   line {
-    font-family: \0000347;
-  }
-}
-
-#twitterConnect {
-  transition: 0.2s;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \0000349;
-  }
-}
-
-#twitterConnect:hover {
-  cursor: pointer;
-  margin-top: -0.25em;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \0000353;
+    font-family: \0000346;
   }
 }
 
@@ -7742,7 +7712,7 @@ body {
   }
 
   line {
-    font-family: \0000356;
+    font-family: \0000349;
   }
 }
 
@@ -7758,7 +7728,7 @@ body {
   }
 
   line {
-    font-family: \0000360;
+    font-family: \0000353;
   }
 }
 
@@ -7775,7 +7745,7 @@ body {
   }
 
   line {
-    font-family: \0000366;
+    font-family: \0000359;
   }
 }
 
@@ -7794,7 +7764,7 @@ body {
   }
 
   line {
-    font-family: \0000371;
+    font-family: \0000364;
   }
 }
 
@@ -7809,7 +7779,7 @@ body {
   }
 
   line {
-    font-family: \0000378;
+    font-family: \0000371;
   }
 }
 
@@ -7824,7 +7794,7 @@ body {
   }
 
   line {
-    font-family: \0000380;
+    font-family: \0000373;
   }
 }
 
@@ -7839,7 +7809,7 @@ body {
   }
 
   line {
-    font-family: \0000384;
+    font-family: \0000377;
   }
 }
 
@@ -7853,328 +7823,7 @@ body {
   }
 
   line {
-    font-family: \0000389;
-  }
-}
-
-.bar {
-  width: 100%;
-  min-width: 110%;
-  height: 0.25em;
-  background: #71607f;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \0000395;
-  }
-}
-
-.score {
-  color: #71607f;
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: 0 1em;
-  border-bottom: 5px solid #71607f;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003102;
-  }
-}
-
-.players {
-  color: #999999;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003104;
-  }
-}
-
-.players ul {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003107;
-  }
-}
-
-.players li {
-  display: inline-block;
-  float: left;
-  margin: 0 0.5em;
-  padding: 0.5em 1em;
-  border: 1px solid white;
-  border-radius: 10px;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003114;
-  }
-}
-
-.players li:before {
-  content: "@";
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003117;
-  }
-}
-
-li.current {
-  border: 1px solid #66ccc2;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003120;
-  }
-}
-
-li.you {
-  color: #71607f;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003125;
-  }
-}
-
-#main-inner {
-  position: relative;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003126;
-  }
-}
-
-#main-inner .toy {
-  margin: 5em auto 0;
-  max-width: 1380px;
-  width: 100%;
-  margin-top: 5em;
-  height: 500px;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003134;
-  }
-}
-
-#main-inner #leap,
-#main-inner .leap {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003139;
-  }
-}
-
-#main-inner #leap h1,
-#main-inner .leap h1 {
-  color: #ffe566;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003141;
-  }
-}
-
-#main-inner #leapUI {
-  z-index: 2000;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003143;
-  }
-}
-
-#main-inner #leapUI .text-valign {
-  line-height: 420px;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003145;
-  }
-}
-
-#main-inner #leapCanvas {
-  z-index: 1000;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003148;
-  }
-}
-
-.share {
-  margin-top: 3em;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003151;
-  }
-}
-
-.imagesTop {
-  position: absolute;
-  left: 50%;
-  margin-left: -690px;
-  text-align: center;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003156;
-  }
-}
-
-#toyPull {
-  z-index: 1;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003158;
-  }
-}
-
-#toyBody {
-  z-index: 3;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003160;
-  }
-}
-
-#toyBop {
-  z-index: 4;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003162;
-  }
-}
-
-#toyStripes {
-  z-index: 5;
-  margin-top: 30px;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
-  }
-
-  line {
-    font-family: \00003167;
+    font-family: \0000381;
   }
 }
 
@@ -8188,7 +7837,7 @@ li.you {
   }
 
   line {
-    font-family: \00003170;
+    font-family: \0000384;
   }
 }
 
@@ -8204,7 +7853,7 @@ li.you {
   }
 
   line {
-    font-family: \00003174;
+    font-family: \0000388;
   }
 }
 
@@ -8218,7 +7867,7 @@ li.you {
   }
 
   line {
-    font-family: \00003176;
+    font-family: \0000390;
   }
 }
 
@@ -8232,7 +7881,7 @@ li.you {
   }
 
   line {
-    font-family: \00003178;
+    font-family: \0000392;
   }
 }
 
@@ -8246,17 +7895,13 @@ li.you {
   }
 
   line {
-    font-family: \00003181;
+    font-family: \0000395;
   }
 }
 
-#teaser {
-  position: absolute;
-  top: -20em;
-  left: 50%;
-  margin-left: -690px;
-  text-align: center;
-  transition: 0.4s;
+#main-inner {
+  width: 90%;
+  margin: 0 auto;
 }
 
 @media -sass-debug-info {
@@ -8265,10 +7910,327 @@ li.you {
   }
 
   line {
-    font-family: \00003188;
+    font-family: \0000398;
   }
 }
 
-#teaser:hover {
-  top: -19em;
+#main-inner .top {
+  height: 21em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003100;
+  }
+}
+
+#main-inner .top .left,
+#main-inner .top .right {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003104;
+  }
+}
+
+#main-inner .gi-list {
+  border: none;
+  background: none;
+  border-style: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003108;
+  }
+}
+
+#main-inner .gi-webrtc {
+  position: relative;
+  bottom: inherit;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003114;
+  }
+}
+
+.gi-webrtc .gi-list {
+  border: none;
+  background: none;
+  border-style: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003120;
+  }
+}
+
+.gi-webrtc.gi-override .gi-webrtc-centered {
+  box-shadow: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003123;
+  }
+}
+
+.gi-webrtc.gi-override .gi-list {
+  border: none;
+  background: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003127;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003130;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user .gi-audio {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003133;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user .gi-user-wrapper {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003137;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user .gi-stream-wrapper {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003141;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user .gi-stream {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003146;
+  }
+}
+
+.gi-webrtc.gi-override .gi-user .gi-stream-wrapper .gi-overlay {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003149;
+  }
+}
+
+.gi-webrtc.gi-override .gi-avatar {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003152;
+  }
+}
+
+.gi-webrtc.gi-override .gi-avatar .gi-avatar-img {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003156;
+  }
+}
+
+.gi-webrtc.gi-override .gi-color {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003160;
+  }
+}
+
+.gi-webrtc.gi-override .gi-name {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003163;
+  }
+}
+
+.gi-webrtc.gi-override .gi-join {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003166;
+  }
+}
+
+.gi-webrtc.gi-override .gi-join .gi-icon {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003170;
+  }
+}
+
+.gi-webrtc.gi-override .gi-collapse-wrapper {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003174;
+  }
+}
+
+.gi-webrtc.gi-override .gi-collapse {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003178;
+  }
+}
+
+.gi-webrtc.gi-override .gi-icon {
+  /* Add custom styles */
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/index\.sass;
+  }
+
+  line {
+    font-family: \00003183;
+  }
+}
+
+.gi-webrtc.gi-override .gi-expand-container .gi-stream-wrapper {
+  /* Add custom styles */
 }

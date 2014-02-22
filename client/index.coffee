@@ -37,7 +37,3 @@ llr = angular.module('llrApp', [
 
 .factory "leapController", ->
   new Leap.Controller()
-
-.factory "roundState", ->
-  passedTurn: false
-  gestures: 0

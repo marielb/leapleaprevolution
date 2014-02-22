@@ -1,6 +1,23 @@
 angular.module('llrApp')
   .controller "GameStateCtrl", ($scope, $rootScope, llrSock) ->
 
+    # Connect URL
+    url = 'https://goinstant.net/1efb28932cd4/mchacks'
+
+    # Connect to GoInstant
+    goinstant.connect url, (err, platformObj, roomObj) ->
+      if err
+        throw err;
+  
+      # Create a new instance of the WebRTC widget
+      webrtc = new goinstant.widgets.WebRTC { room: roomObj, listContainer: $('.players')[0], expandContainer: $('.expand')[0] }
+
+      # Initialize the WebRTC widget
+      webrtc.initialize (err) ->
+        if err
+          throw err;
+        # The widget should now be rendered on the page
+
     llrSock.emit "state:lobby"
 
     $scope.users = []

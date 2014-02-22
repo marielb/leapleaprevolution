@@ -23,5 +23,4 @@ angular.module('llrApp')
       clearTimeout(testTimeout)
 
     testTimeout = setTimeout testConnect, 1000
-
-    $scope.twitterAuth = -> $window.location.href = "/auth/twitter"
+    

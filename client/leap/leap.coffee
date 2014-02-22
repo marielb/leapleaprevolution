@@ -1,6 +1,5 @@
-llr = angular.module 'llrApp'
+angular.module('llrApp').run ($rootScope, leapController, $timeout) ->
 
-llr.run ($rootScope, leapController, $timeout) ->
     leapController.loop (frame) ->
       # do stuff here
       # $rootScope.$emit("something");

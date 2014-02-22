@@ -21,10 +21,9 @@ body
   overflow-x: hidden
 
 #wrapper
-  white-space: pre-line
   min-height: 100%
   margin-bottom: -1*$footer-height
-  padding-top: 4em
+  padding-top: 2em
 
 #wrapper:after
   content: ""
@@ -43,12 +42,6 @@ body
 
 *:focus, *:active, *:hover
   outline: none
-
-#twitterConnect
-  transition: .2s
-  &:hover
-    cursor: pointer
-    margin-top: -.25em
 
 #footer
   padding-top: 0
@@ -84,85 +77,6 @@ body
   span
     color: $color_gray-light
 
-// SCORE
-
-.bar
-  width: 100%
-  min-width: 110%
-  height: .25em
-  background: $color_purple
-
-.score
-  color: $color_purple
-  display: inline-block
-  margin-bottom: 1em
-  padding: 0 1em
-  border-bottom: 5px solid $color_purple 
-
-.players
-  color: $color_gray-light
-  ul
-    display: inline-block
-    margin: 0 auto
-  li
-    display: inline-block
-    float: left
-    margin: 0 .5em
-    padding: .5em 1em
-    border: 1px solid #fff
-    border-radius: 10px
-  li:before
-    content: "@"
-
-li.current
-  border: 1px solid $color_green
-
-li.you
-  color: $color_purple
-
-// MAIN TOY
-
-#main-inner
-  .toy
-    margin: 5em auto 0
-    max-width: 1380px
-    width: 100%
-    margin-top: 5em
-    height: 500px
-
-  position: relative
-  #leap, .leap
-    @include square(100%)
-    position: absolute
-    top: 0
-    left: 0
-    h1
-      color: $color_yellow
-  #leapUI
-    z-index: 2000
-    .text-valign
-      line-height: 420px
-  #leapCanvas
-    z-index: 1000
-
-.share
-  margin-top: 3em
-
-.imagesTop
-  position: absolute
-  left:     50%
-  margin-left: -690px
-  text-align: center
-#toyPull
-  z-index:  1
-#toyBody
-  z-index:  3
-#toyBop
-  z-index:  4
-#toyStripes
-  z-index:  5
-  margin-top: 30px
-
 #main
   #header
     margin: 12em 0 6em
@@ -178,12 +92,93 @@ li.you
 .disconnected
   color: $color_gray-light
 
-#teaser
-  position: absolute
-  top: -20em
-  left: 50%
-  margin-left: -690px
-  text-align: center
-  transition: .4s
-  &:hover
-    top: -19em
+#main-inner
+  width: 90%
+  margin: 0 auto
+  .top
+    height: 21em
+    .left, .right
+      float: left
+      height: 100%
+      width: 50%
+  .gi-list
+    border: none
+    background: none
+    border-style: none
+  .gi-webrtc 
+    position: relative
+    bottom: inherit
+
+.gi-webrtc 
+
+  .gi-list
+    border: none
+    background: none
+    border-style: none
+
+.gi-webrtc.gi-override 
+  .gi-webrtc-centered 
+    box-shadow: none
+
+  .gi-list 
+    border: none
+    background: none
+
+  .gi-user 
+    /* Add custom styles */
+
+    .gi-audio 
+      /* Add custom styles */
+
+    .gi-user-wrapper 
+      /* Add custom styles */
+
+
+    .gi-stream-wrapper 
+      /* Add custom styles */
+
+
+    .gi-stream 
+      /* Add custom styles */
+
+
+    .gi-stream-wrapper 
+      .gi-overlay 
+        /* Add custom styles */
+
+  .gi-avatar 
+    /* Add custom styles */
+
+    .gi-avatar-img 
+      /* Add custom styles */
+
+
+  .gi-color 
+    /* Add custom styles */
+
+
+  .gi-name 
+    /* Add custom styles */
+
+  .gi-join 
+    /* Add custom styles */
+
+    .gi-icon 
+      /* Add custom styles */
+
+
+  .gi-collapse-wrapper 
+    /* Add custom styles */
+
+
+  .gi-collapse 
+    /* Add custom styles */
+
+
+  .gi-icon 
+    /* Add custom styles */
+
+
+  .gi-expand-container 
+    .gi-stream-wrapper 
+      /* Add custom styles */

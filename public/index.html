@@ -1,8 +1,64 @@
-<!DOCTYPE html><html ng-app="llrApp"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><base href="/"><title>leap leap revolution</title><meta name="description" content="Karoake + Just Dance over a video conference"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon"><!-- build:css(./) styles/vendor.css --><link rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.css"><link rel="stylesheet" href="components/animate.css/animate.css"><!-- endbuild -->
-<!-- webfonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css'>
-<!-- end webfonts -->
-<!-- build:css(.tmp) styles/main.css --><link rel="stylesheet" href="index.css"><link rel="stylesheet" href="layout/colors.css"><link rel="stylesheet" href="layout/typo.css"><link rel="stylesheet" href="main/main.css"><link rel="stylesheet" href="main/loading.css"><!-- endbuild --></head><body ng-controller="BodyCtrl"><div id="buffer" ng-if="animReady"><div id="wrapper" ng-view ng-class="animClass" class="wrapper"></div><div ng-include="" src=" 'layout/footer.html' " class="wrapper ng-cloak"></div></div><!-- build:js(./) scripts/plugins.js --><script src="components/jquery/dist/jquery.js"></script><script src="components/jquery-ui/ui/jquery-ui.js"></script><script src="components/angular/angular.js"></script><script src="components/flowtype/flowtype.js"></script><script src="components/socket.io-client/dist/socket.io.js"></script><script src="components/d3js/build/d3.v3.js"></script><script src="components/leapjs/leap.coffee"></script><script src="components/buzz/dist/buzz.js"></script><!-- endbuild -->
-<!-- build:js(./) scripts/modules.js --><script src="components/angular-route/angular-route.js"></script><script src="components/angular-animate/angular-animate.js"></script><!-- endbuild -->
-<!-- build:js(.tmp) scripts/main.js --><script src="index.js"></script><script src="layout/404/404.js"></script><script src="main/main.js"></script><script src="main/gamestate.js"></script><script src="leap/leap.coffee"></script><script src="play/audio.js"></script><script src="play/hue.js"></script><!-- endbuild -->
-<!-- Facebook meta --><meta property="og:title" content="Bop It!"><meta property="og:url" content="http://leapleaprevolution.com"><meta property="og:site_name" content="leapleaprevolution"><meta property="og:description" content="leapleaprevolution. By @whatmariel, @ozthehungry, @patatohead at McHacks 2014"><!-- end Facebook meta --></body></html>
+<!DOCTYPE html>
+<html ng-app="llrApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <base href="/">
+    <title>leap leap revolution</title>
+    <meta name="description" content="Karoake + Just Dance over a video conference">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
+    <!-- build:css(./) styles/vendor.css -->
+    <link rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="components/animate.css/animate.css">
+    <!-- endbuild -->
+    <!-- webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css'>
+    <!-- end webfonts -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="layout/colors.css">
+    <link rel="stylesheet" href="layout/typo.css">
+    <link rel="stylesheet" href="main/main.css">
+    <link rel="stylesheet" href="main/loading.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="BodyCtrl">
+    <div id="buffer" ng-if="animReady">
+      <div id="wrapper" ng-view ng-class="animClass" class="wrapper"></div>
+      <div ng-include="" src=" 'layout/footer.html' " class="wrapper ng-cloak"></div>
+    </div>
+    <!-- build:js(./) scripts/plugins.js -->
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/jquery-ui/ui/jquery-ui.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/flowtype/flowtype.js"></script>
+    <script src="components/socket.io-client/dist/socket.io.js"></script>
+    <script src="components/d3js/build/d3.v3.js"></script>
+    <script src="components/leapjs/leap.js"></script>
+    <script src="components/buzz/dist/buzz.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(./) scripts/modules.js -->
+    <script src="components/angular-route/angular-route.js"></script>
+    <script src="components/angular-animate/angular-animate.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(.tmp) scripts/main.js -->
+    <script src="index.js"></script>
+    <script src="layout/404/404.js"></script>
+    <script src="main/main.js"></script>
+    <script src="main/gamestate.js"></script>
+    <script src="leap/leap.js"></script>
+    <!-- endbuild -->
+    <!-- GoInstant -->
+    <script type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js"></script>
+    <script type="text/javascript" src="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.min.js"></script>
+    <!-- CSS is optional -->
+    <link rel="stylesheet" href="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.css">
+    <!-- Facebook meta -->
+    <meta property="og:title" content="Bop It!">
+    <meta property="og:url" content="http://leapleaprevolution.com">
+    <meta property="og:site_name" content="leapleaprevolution">
+    <meta property="og:description" content="leapleaprevolution. By @whatmariel, @ozthehungry, @patatohead at McHacks 2014">
+    <!-- end Facebook meta -->
+  </body>
+</html>

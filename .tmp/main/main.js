@@ -27,10 +27,7 @@
         }
         return clearTimeout(testTimeout);
       };
-      testTimeout = setTimeout(testConnect, 1000);
-      return $scope.twitterAuth = function () {
-        return $window.location.href = '/auth/twitter';
-      };
+      return testTimeout = setTimeout(testConnect, 1000);
     }
   ]);
 }.call(this));  /*

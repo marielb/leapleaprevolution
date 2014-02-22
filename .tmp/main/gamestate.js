@@ -4,7 +4,24 @@
     '$rootScope',
     'llrSock',
     function ($scope, $rootScope, llrSock) {
-      var moves;
+      var moves, url;
+      url = 'https://goinstant.net/1efb28932cd4/mchacks';
+      goinstant.connect(url, function (err, platformObj, roomObj) {
+        var webrtc;
+        if (err) {
+          throw err;
+        }
+        webrtc = new goinstant.widgets.WebRTC({
+          room: roomObj,
+          listContainer: $('.players')[0],
+          expandContainer: $('.expand')[0]
+        });
+        return webrtc.initialize(function (err) {
+          if (err) {
+            throw err;
+          }
+        });
+      });
       llrSock.emit('state:lobby');
       $scope.users = [];
       moves = [

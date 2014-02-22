@@ -13,12 +13,12 @@ randomInt = (min, max) ->
 
 
 SETTINGS =
-  numTurns: 6
+  numUsers: 3
 
 
 makeState = ->
   currentUser: 0
-  
+
   getNextUser: ->
     if STATE.currentUser is (SETTINGS.numUsers-1)
     then 0

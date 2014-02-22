@@ -14,6 +14,7 @@ html(ng-app="llrApp")
     <!-- build:css(./) styles/vendor.css -->
     link(rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.css")
     link(rel="stylesheet" href="components/animate.css/animate.css")
+
     <!-- endbuild -->
 
     <!-- webfonts -->
@@ -43,7 +44,7 @@ html(ng-app="llrApp")
     script(src="components/flowtype/flowtype.js")
     script(src="components/socket.io-client/dist/socket.io.js")
     script(src="components/d3js/build/d3.v3.js")
-    script(src="components/leapjs/leap.coffee")
+    script(src="components/leapjs/leap.js")
     script(src="components/buzz/dist/buzz.js")
     <!-- endbuild -->
 
@@ -57,11 +58,14 @@ html(ng-app="llrApp")
     script(src="layout/404/404.js")
     script(src="main/main.js")
     script(src="main/gamestate.js")
-    script(src="leap/leap.coffee")
-    script(src="play/audio.js")
-    script(src="play/hue.js")
+    script(src="leap/leap.js")
     <!-- endbuild -->
 
+    <!-- GoInstant -->
+    script(type="text/javascript" src="https://cdn.goinstant.net/v1/platform.min.js")
+    script(type="text/javascript" src="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.min.js")
+    <!-- CSS is optional -->
+    link(rel="stylesheet" href="https://cdn.goinstant.net/widgets/webrtc/latest/webrtc.css")
 
     <!-- Facebook meta -->
     meta(property="og:title", content="Bop It!")

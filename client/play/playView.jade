@@ -1,9 +1,11 @@
 #play(ng-show="isLoaded" role="main")
-  #header(ng-controller="GameStateCtrl")
-      h1 leap leap <span>revolution</span>
-    .row.players
-      ul
-        li.p(ng-repeat="user in users", ng-class="{current: user.current}")
-          | {{ user.name }}
-
-  #main-inner main stuff goes here
+	#header(ng-controller="GameStateCtrl")
+		h1 leap leap <span>revolution</span>
+	#main-inner 
+		.top
+			.left
+				.lyrics
+			.right
+				.expand
+				.motion
+		.players 

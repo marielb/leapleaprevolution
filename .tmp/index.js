@@ -37,11 +37,6 @@
     return io.connect();
   }).factory('leapController', function () {
     return new Leap.Controller();
-  }).factory('roundState', function () {
-    return {
-      passedTurn: false,
-      gestures: 0
-    };
   });
 }.call(this));  /*
 //@ sourceMappingURL=index.js.map
