@@ -1,0 +1,14 @@
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/colors\.sass;
+  }
+
+  line {
+    font-family: \000035;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}

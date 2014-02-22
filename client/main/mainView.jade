@@ -1,0 +1,18 @@
+#main(ng-show="isLoaded" role="main")
+
+  #header
+    h1 leap leap <span>revolution</span>
+
+  #main-inner(ng-controller="MainCtrl")
+    .row.status.connected
+      img#check(src="images/check.svg")
+      p leap motion is ready to go!
+    .row.status.disconnected
+      .loading
+        div
+        div
+        div
+        div
+      p searching for leap motion
+    //- .row.connect
+    //-   img#twitterConnect(src="images/twitter-connect.svg" ng-click="twitterAuth()")

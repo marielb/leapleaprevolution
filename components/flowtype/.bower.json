@@ -1,0 +1,13 @@
+{
+  "name": "flowtype",
+  "homepage": "https://github.com/simplefocus/FlowType.JS",
+  "_release": "a97f341dfc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "a97f341dfc2c7e81cda21e04d8531a7e6084563d"
+  },
+  "_source": "git://github.com/simplefocus/FlowType.JS.git",
+  "_target": "*",
+  "_originalSource": "flowtype"
+}

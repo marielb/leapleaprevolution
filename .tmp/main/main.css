@@ -1,0 +1,45 @@
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/main\/main\.sass;
+  }
+
+  line {
+    font-family: \000035;
+  }
+}
+
+#wrapper {
+  text-align: center;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/main\/main\.sass;
+  }
+
+  line {
+    font-family: \000038;
+  }
+}
+
+#bodySvg {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/main\/main\.sass;
+  }
+
+  line {
+    font-family: \0000313;
+  }
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  height: 420px;
+}

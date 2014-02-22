@@ -1,0 +1,206 @@
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \000036;
+  }
+}
+
+body {
+  font-family: Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  color: #333333;
+  background-color: white;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000312;
+  }
+}
+
+a {
+  color: #66ccc2;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000315;
+  }
+}
+
+a:hover {
+  color: #333333;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000318;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+p,
+.p,
+a,
+.a {
+  line-height: 1.4;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000329;
+  }
+}
+
+b,
+.b,
+strong,
+.strong {
+  font-weight: 800;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000332;
+  }
+}
+
+i,
+.i,
+em,
+.em {
+  font-style: italic;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000336;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 4em;
+  font-weight: 300;
+  line-height: 1.1;
+  text-transform: lowercase;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000342;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 8em;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000348;
+  }
+}
+
+p,
+.p {
+  font-size: 1em;
+  padding-bottom: 1rem;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000352;
+  }
+}
+
+.h1,
+.h2,
+.p {
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000356;
+  }
+}
+
+::-moz-selection {
+  background: #71607f;
+  color: white;
+}
+
+::selection {
+  background: #71607f;
+  color: white;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/mariel\/Sites\/leapleaprevolution\/client\/layout\/typo\.sass;
+  }
+
+  line {
+    font-family: \0000360;
+  }
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
