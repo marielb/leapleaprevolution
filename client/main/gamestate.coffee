@@ -18,6 +18,15 @@ angular.module('llrApp')
           throw err;
         # The widget should now be rendered on the page
 
+    # Soundcloud stuff
+    SC.initialize({
+      client_id: "fd1dc47d643674b46399ab11ec8089bf"
+    });
+    
+    $('#play h1').click () ->
+      SC.stream '/tracks/293', {autoPlay: true}
+
+    # Game stuff
     llrSock.emit "state:lobby"
 
     $scope.users = []
