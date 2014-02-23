@@ -4,11 +4,23 @@ angular.module('llrApp')
     # Connect URL
     url = 'https://goinstant.net/1efb28932cd4/mchacks'
 
+    me = null
+
+    score = 0
+
     # Connect to GoInstant
-    goinstant.connect url, (err, platformObj, roomObj) ->
+    connection = new goinstant.Connection url
+    goinstant.connect url, (err, connection, roomObj) ->
       if err
         throw err;
-  
+
+      roomObj.self().get (err, userData, context) ->
+        if (err) 
+          throw err;
+        console.log userData.displayName, 'has joined!'
+        console.log userData
+        me = userData
+
       # Create a new instance of the WebRTC widget
       webrtc = new goinstant.widgets.WebRTC { room: roomObj, listContainer: $('.players')[0], expandContainer: $('.expand')[0] }
 
@@ -16,39 +28,48 @@ angular.module('llrApp')
       webrtc.initialize (err) ->
         if err
           throw err;
-        # The widget should now be rendered on the page
+
+      connection.on 'disconnect', (connection) ->
+          console.log me.displayName, 'has left!'
 
     # Soundcloud stuff
     SC.initialize({
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
-    
-    $('#play h1').click () ->
-      SC.stream '/tracks/293', {autoPlay: true}
+
+    # $('#play h1').click () ->
+    #   SC.stream '/tracks/293', {autoPlay: true}
 
     # Game stuff
-    llrSock.emit "state:lobby"
+
+    randomInt = (min, max) ->
+      Math.floor(Math.random() * (max - min + 1)) + min
+
+    changeText = (move) ->
+      $('#main-inner .motion').text(move)
+
+    incrementScore = ->
+      score = score + 1
+      $('.gi-user:first-child .gi-user-wrapper .gi-color').text(score)
 
     $scope.users = []
 
-    moves = [
-        name: "swipe left",   cb: ->
-      ,
-        name: "swipe right",  cb: ->
-    ]
+    moves = ["swipeleft", "swiperight", "swipetop", "swipebottom", "circleleft", "circleright"]
+
+    $('#play h1').click () ->
+      $('.gi-user-wrapper .gi-color').text(score)
+      llrSock.emit "gameTrigger"
 
 
-    llrSock.on "state:all:users", (us) -> $scope.$apply ->
-      $scope.users = us
+    llrSock.on "gameLoop", ->
+      move = moves[randomInt(0, moves.length - 1)]
+      $('#main-inner .motion').text('')
+      setTimeout ( ->
+        changeText move
+      ), 2000
 
-    llrSock.on "state:playing:turn", (command) -> $scope.$apply ->
-      # do stuff here
+      $(window).bind move, (e, gesture) ->
+        incrementScore()
+        $(window).unbind move
+        llrSock.emit "moveSuccess", { move: e.type }
 
-    llrSock.on "state:gameOver:now", ->
-      # do stuff here
-
-    llrSock.on "state:playing", -> $scope.$apply ->
-      # do stuff here
-
-    $rootScope.$on "play", -> $scope.$apply ->
-      llrSock.emit "state:playing"

@@ -95,12 +95,6 @@ body
 #main-inner
   width: 90%
   margin: 0 auto
-  .top
-    height: 21em
-    .left, .right
-      float: left
-      height: 100%
-      width: 50%
   .gi-list
     border: none
     background: none
@@ -109,6 +103,22 @@ body
     position: relative
     bottom: inherit
 
+  .top
+    height: 21em
+    .gi-stream-wrapper
+      width: 400px
+    .left, .right
+      float: left
+      height: 100%
+      width: 50%
+    .motion, .expand
+      height: 50%
+      .motionpic
+        width: 50%
+        float: left
+      .motionwords
+        width: 50%
+        float:left
 .gi-webrtc 
 
   .gi-list
@@ -131,11 +141,10 @@ body
       /* Add custom styles */
 
     .gi-user-wrapper 
-      /* Add custom styles */
+      padding-left: 7px
 
 
     .gi-stream-wrapper 
-      /* Add custom styles */
 
 
     .gi-stream 
@@ -154,8 +163,13 @@ body
 
 
   .gi-color 
-    /* Add custom styles */
+    background: none
+    font-size: 18pt
+    content: inherit
 
+  .gi-color:before
+    content: inherit
+    box-shadow: none
 
   .gi-name 
     /* Add custom styles */
