@@ -51,7 +51,7 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
     };
     changeText = function(move) {
-      return $('#main-inner .motion').text(move);
+      return $('#main-inner .motion').html(move + "<br><img src='/images/" + move + ".jpg'>");
     };
     incrementScore = function() {
       score = score + 1;
@@ -66,17 +66,19 @@
     return llrSock.on("gameLoop", function() {
       var move;
       move = moves[randomInt(0, moves.length - 1)];
-      $('#main-inner .motion').text('');
-      setTimeout((function() {
-        return changeText(move);
-      }), 2000);
-      return $(window).bind(move, function(e, gesture) {
-        incrementScore();
+      if (score !== 0) {
+        $('#main-inner .motion').html("<img src='/images/check.svg' width='50px'>");
+      }
+      $(window).bind(move, function(e, gesture) {
         $(window).unbind(move);
+        incrementScore();
         return llrSock.emit("moveSuccess", {
           move: e.type
         });
       });
+      return setTimeout((function() {
+        return changeText(move);
+      }), 1500);
     });
   });
 

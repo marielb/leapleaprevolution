@@ -50,7 +50,7 @@ angular.module('llrApp')
       Math.floor(Math.random() * (max - min + 1)) + min
 
     changeText = (move) ->
-      $('#main-inner .motion').text(move)
+      $('#main-inner .motion').html(move+"<br><img src='/images/" + move + ".jpg'>")
 
     incrementScore = ->
       score = score + 1
@@ -67,13 +67,15 @@ angular.module('llrApp')
 
     llrSock.on "gameLoop", ->
       move = moves[randomInt(0, moves.length - 1)]
-      $('#main-inner .motion').text('')
-      setTimeout ( ->
-        changeText move
-      ), 2000
+      if score != 0
+        $('#main-inner .motion').html("<img src='/images/check.svg' width='50px'>")
 
       $(window).bind move, (e, gesture) ->
-        incrementScore()
         $(window).unbind move
+        incrementScore()
         llrSock.emit "moveSuccess", { move: e.type }
+
+      setTimeout ( ->
+        changeText move
+      ), 1500
 
