@@ -23,8 +23,12 @@ angular.module('llrApp')
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
     
-    $('#play h1').click () ->
-      SC.stream '/tracks/293', {autoPlay: true}
+    $('#play button').click () ->
+      track_url = $('#urlForm').val()
+    
+      SC.get '/resolve', url: track_url, (data) ->
+        SC.stream '/tracks/' + data.id, {autoPlay: true}
+        $('#play p').text(data.title)
 
     # Game stuff
     llrSock.emit "state:lobby"
