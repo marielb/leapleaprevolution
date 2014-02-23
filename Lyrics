@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lyrics</title>
+</head>
+<body>
+ 
+Song: <input type="text" class="song" name="song"><br>
+Artist: <input type="text" class="artist" name="artist"><br>
+<button class="submit"> Go </button>
+ 
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+var params;
+var so;
+var art;
+var lyrics;
+var url;
+var xml;
+
+function httpGet(url){
+    var loop = 0;
+    while(loop == 0){
+        try{
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, true);
+            if (xmlHttp.readyState > 0) {
+                //xmlHttp.send();
+            }
+            console.log("hi");
+            console.log("bye");
+            loop = 1;
+        }catch(err){
+        }
+    }
+    xmlHttp.send();
+    return xmlHttp.responseText;
+}
+
+function getSong(){
+    so = document.getElementsByClassName("song");
+    art = document.getElementsByClassName("artist");
+    url = "Access-Control-Allow-Origin: * http://lyrics.wikia.com/api.php?artist=" + art + "&song=" + so + "&fmt=xml";
+    console.log(url);
+    var xml = httpGet(url);
+    console.log(xml);
+    xmlDoc = $.parseXML( xml );
+    $xml = $( xmlDoc );
+    $title = $xml.find( "title" );
+    console.log(xmlDoc);
+    lyrics = $title.text();
+    console.log($title.text());
+    //displayLyrics();
+}
+/*
+function displayLyrics(){
+    var win = window.open("","","height=,left=,scrollbars=yes,top=,width=","true");
+    win.document.write(lyrics);
+    win.setTimeout(win.scrollBy(0,0),0);
+}
+*/
+$('.submit').click(function() {
+    getSong();
+});
+
+
+</script>
+ 
+</body>
+</html>
