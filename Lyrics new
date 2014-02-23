@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lyrics</title>
+</head>
+<body>
+ 
+<form id="form" action="form_action.asp">
+Song: <input type="text" name="song"><br>
+Artist: <input type="text" name="artist"><br>
+<input type="button" onclick="getSong()" value="Go">
+</form> 
+ 
+<script>
+
+var params;
+var so;
+var art;
+var lyrics;
+var url;
+var xml;
+
+function getSong(){
+    so = document.getElementById("form").elements[0].value;
+    art = document.getElementById("form").elements[1].value;
+    url = "http://lyrics.wikia.com/" + art + ":" + so;
+    console.log(url);
+    displayLyrics();
+}
+
+function displayLyrics(){
+    var win = window.open(url,"","height=500,width=350","false");
+    window.scrollTo(0,500);
+}
+
+</script>
+ 
+</body>
+</html>
