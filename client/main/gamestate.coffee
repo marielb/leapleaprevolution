@@ -37,22 +37,31 @@ angular.module('llrApp')
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
 
-    $('#play button').click () ->
-      artist_name= $('#artistForm').val()
-      song_name= $('#songForm').val()
+    $(document).keypress (event) ->
+      if event.which == 13 and score == 0
+        url = "http://lyrics.wikia.com/" + artist_name + ":" + song_name + "#mw-content-text";
+        console.log(url);
+        $('.lyrics').html("<iframe src='" + url + "'></iframe>")
 
-      SC.get '/tracks', {q: artist_name + ' ' + song_name }, (tracks)->
-        first_track = tracks[0]
-        track_id = first_track.id
-        track_title = first_track.title
+        $('.gi-user-wrapper .gi-color').text(score)
+        llrSock.emit "gameTrigger"
 
-        SC.stream '/tracks/' + track_id, {onfinish: ()->
-          $('#play button').show()
-        },
-        (sound)->
-          sound.play()
-          $('#play button').hide()
-          $('#play p').text(track_title)
+        artist_name= $('#artistForm').val()
+        song_name= $('#songForm').val()
+
+        SC.get '/tracks', {q: artist_name + ' ' + song_name }, (tracks)->
+          first_track = tracks[0]
+          track_id = first_track.id
+          track_title = first_track.title
+
+          SC.stream '/tracks/' + track_id, {onfinish: ()->
+            $('#play button').show()
+            artist_name= $('#artistForm').val("")
+            song_name= $('#songForm').val("")
+          },
+          (sound)->
+            sound.play()
+            $('#play p').text(track_title)
 
     # Game stuff
 
@@ -64,10 +73,6 @@ angular.module('llrApp')
       $('.gi-user:first-child .gi-user-wrapper .gi-color').text(score)
 
     $scope.users = []
-
-    $('#play h1').click () ->
-      $('.gi-user-wrapper .gi-color').text(score)
-      llrSock.emit "gameTrigger"
 
     llrSock.on "gameLoop", (data) ->
       if score != 0
