@@ -9,7 +9,7 @@ Karaoke + Just Dance over a video conference
 2. Install Grunt, Bower, and CoffeeScript:  
     > sudo npm install -g grunt-cli bower coffee-script
 3. Install the dependencies:  
-    > bower install
+    > bower install  
     > npm install
 4. Start the auto-build and auto-refresh server:  
     > sudo PORT=8000 grunt serve

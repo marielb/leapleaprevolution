@@ -1,6 +1,6 @@
 (function() {
   angular.module('llrApp').controller("GameStateCtrl", function($scope, $rootScope, llrSock) {
-    var changeText, connection, incrementScore, me, moves, randomInt, score, url;
+    var changeText, connection, incrementScore, me, score, url;
     url = 'https://goinstant.net/1efb28932cd4/mchacks';
     me = null;
     score = 0;
@@ -36,20 +36,27 @@
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
     $('#play button').click(function() {
-      var track_url;
-      track_url = $('#urlForm').val();
-      return SC.get('/resolve', {
-        url: track_url
-      }, function(data) {
-        SC.stream('/tracks/' + data.id, {
-          autoPlay: true
+      var artist_name, song_name;
+      artist_name = $('#artistForm').val();
+      song_name = $('#songForm').val();
+      return SC.get('/tracks', {
+        q: artist_name + ' ' + song_name
+      }, function(tracks) {
+        var first_track, track_id, track_title;
+        first_track = tracks[0];
+        track_id = first_track.id;
+        track_title = first_track.title;
+        return SC.stream('/tracks/' + track_id, {
+          onfinish: function() {
+            return $('#play button').show();
+          }
+        }, function(sound) {
+          sound.play();
+          $('#play button').hide();
+          return $('#play p').text(track_title);
         });
-        return $('#play p').text(data.title);
       });
     });
-    randomInt = function(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
     changeText = function(move) {
       return $('#main-inner .motion').html(move + "<br><img src='/images/" + move + ".jpg'>");
     };
@@ -58,27 +65,24 @@
       return $('.gi-user:first-child .gi-user-wrapper .gi-color').text(score);
     };
     $scope.users = [];
-    moves = ["swipeleft", "swiperight", "swipetop", "swipebottom", "circleleft", "circleright"];
     $('#play h1').click(function() {
       $('.gi-user-wrapper .gi-color').text(score);
       return llrSock.emit("gameTrigger");
     });
-    return llrSock.on("gameLoop", function() {
-      var move;
-      move = moves[randomInt(0, moves.length - 1)];
+    return llrSock.on("gameLoop", function(data) {
       if (score !== 0) {
         $('#main-inner .motion').html("<img src='/images/check.svg' width='50px'>");
       }
-      $(window).bind(move, function(e, gesture) {
-        $(window).unbind(move);
+      setTimeout((function() {
+        return changeText(data.move);
+      }), 1500);
+      return $(window).bind(data.move, function(e, gesture) {
+        $(window).unbind(data.move);
         incrementScore();
         return llrSock.emit("moveSuccess", {
           move: e.type
         });
       });
-      return setTimeout((function() {
-        return changeText(move);
-      }), 1500);
     });
   });
 

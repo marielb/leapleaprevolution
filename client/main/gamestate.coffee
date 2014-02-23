@@ -53,12 +53,8 @@ angular.module('llrApp')
           sound.play()
           $('#play button').hide()
           $('#play p').text(track_title)
-    
 
     # Game stuff
-
-    randomInt = (min, max) ->
-      Math.floor(Math.random() * (max - min + 1)) + min
 
     changeText = (move) ->
       $('#main-inner .motion').html(move+"<br><img src='/images/" + move + ".jpg'>")
@@ -69,24 +65,20 @@ angular.module('llrApp')
 
     $scope.users = []
 
-    moves = ["swipeleft", "swiperight", "swipetop", "swipebottom", "circleleft", "circleright"]
-
     $('#play h1').click () ->
       $('.gi-user-wrapper .gi-color').text(score)
       llrSock.emit "gameTrigger"
 
-
-    llrSock.on "gameLoop", ->
-      move = moves[randomInt(0, moves.length - 1)]
+    llrSock.on "gameLoop", (data) ->
       if score != 0
         $('#main-inner .motion').html("<img src='/images/check.svg' width='50px'>")
 
-      $(window).bind move, (e, gesture) ->
-        $(window).unbind move
+      setTimeout ( ->
+        changeText data.move
+      ), 1500
+
+      $(window).bind data.move, (e, gesture) ->
+        $(window).unbind data.move
         incrementScore()
         llrSock.emit "moveSuccess", { move: e.type }
-
-      setTimeout ( ->
-        changeText move
-      ), 1500
 
