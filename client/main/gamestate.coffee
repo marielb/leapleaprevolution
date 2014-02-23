@@ -37,12 +37,19 @@ angular.module('llrApp')
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
     
+    currently_play = false;
+
     $('#play button').click () ->
       track_url = $('#urlForm').val()
-    
+
       SC.get '/resolve', url: track_url, (data) ->
-        SC.stream '/tracks/' + data.id, {autoPlay: true}
-        $('#play p').text(data.title)
+        SC.stream '/tracks/' + data.id, {onfinish: ()->
+          $('#play button').show()
+        },
+        (sound)->
+          sound.play()
+          $('#play button').hide()
+          $('#play p').text(data.title)
 
     # Game stuff
 
