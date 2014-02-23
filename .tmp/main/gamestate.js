@@ -35,6 +35,18 @@
     SC.initialize({
       client_id: "fd1dc47d643674b46399ab11ec8089bf"
     });
+    $('#play button').click(function() {
+      var track_url;
+      track_url = $('#urlForm').val();
+      return SC.get('/resolve', {
+        url: track_url
+      }, function(data) {
+        SC.stream('/tracks/' + data.id, {
+          autoPlay: true
+        });
+        return $('#play p').text(data.title);
+      });
+    });
     randomInt = function(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     };
