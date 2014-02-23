@@ -79,6 +79,6 @@ angular.module('llrApp')
 
       $(window).bind data.move, (e, gesture) ->
         $(window).unbind data.move
-        incrementScore()
-        llrSock.emit "moveSuccess", { move: e.type }
+        incrementScore()/
+        llrSock.emit "gameTrigger"
 

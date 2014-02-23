@@ -78,10 +78,7 @@
       }), 1500);
       return $(window).bind(data.move, function(e, gesture) {
         $(window).unbind(data.move);
-        incrementScore();
-        return llrSock.emit("moveSuccess", {
-          move: e.type
-        });
+        return incrementScore() / llrSock.emit("gameTrigger");
       });
     });
   });
