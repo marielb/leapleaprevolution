@@ -39,15 +39,16 @@ angular.module('llrApp')
 
     $(document).keypress (event) ->
       if event.which == 13 and score == 0
+
+        artist_name= $('#artistForm').val()
+        song_name= $('#songForm').val()
+        
         url = "http://lyrics.wikia.com/" + artist_name + ":" + song_name + "#mw-content-text";
         console.log(url);
         $('.lyrics').html("<iframe src='" + url + "'></iframe>")
 
         $('.gi-user-wrapper .gi-color').text(score)
         llrSock.emit "gameTrigger"
-
-        artist_name= $('#artistForm').val()
-        song_name= $('#songForm').val()
 
         SC.get '/tracks', {q: artist_name + ' ' + song_name }, (tracks)->
           first_track = tracks[0]
