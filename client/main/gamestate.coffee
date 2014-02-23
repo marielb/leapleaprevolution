@@ -38,18 +38,21 @@ angular.module('llrApp')
     });
 
     $('#play button').click () ->
-      track_url = $('#urlForm').val()
+      artist_name= $('#artistForm').val()
+      song_name= $('#songForm').val()
 
-      SC.get '/resolve', url: track_url, (data) ->
-        console.log '/tracks/' + data.id
-        SC.stream '/tracks/' + data.id, {onfinish: ()->
+      SC.get '/tracks', {q: artist_name + ' ' + song_name }, (tracks)->
+        first_track = tracks[0]
+        track_id = first_track.id
+        track_title = first_track.title
+
+        SC.stream '/tracks/' + track_id, {onfinish: ()->
           $('#play button').show()
-          console.log '/tracks/' + data.id
         },
         (sound)->
           sound.play()
           $('#play button').hide()
-          $('#play p').text(data.title)
+          $('#play p').text(track_title)
     
 
     # Game stuff
